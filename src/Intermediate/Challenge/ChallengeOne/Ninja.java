@@ -1,6 +1,6 @@
-package Intermediate.desafio1;
+package Intermediate.Challenge.ChallengeOne;
 
-public class NinjaChallenge {
+public class Ninja {
     Integer idade;
     String nome;
     String aldeia;
@@ -9,7 +9,7 @@ public class NinjaChallenge {
     String statusDaMissao;
 
 
-    public NinjaChallenge(Integer idade, String nome, String aldeia, String nivelDificuldade, String nomeMissao, String statusDaMissao) {
+    public Ninja(Integer idade, String nome, String aldeia, String nivelDificuldade, String nomeMissao, String statusDaMissao) {
         this.idade = idade;
         this.nome = nome;
         this.aldeia = aldeia;
@@ -20,7 +20,7 @@ public class NinjaChallenge {
 
 
     public String Missao(){
-      return "tenho que fazer a missão "+ this.nomeMissao;
+        return "tenho que fazer a missão "+ this.nomeMissao;
     }
     public String nivelDificuldade (){
         return "O nivel da dificulade da missão é " + this.nivelDificuldade;

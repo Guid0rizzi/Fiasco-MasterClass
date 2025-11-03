@@ -1,9 +1,9 @@
-package Intermediate.desafio1;
+package Intermediate.Challenge.ChallengeOne;
 
-public class UchihaChallenge extends NinjaChallenge {
+public class Uchiha extends Ninja{
     String habilidadeSpecial;
-    public UchihaChallenge(Integer idade, String nome, String aldeia, String nivelDificuldade, String nomeMissao, String statusDaMissao, String habilidadeSpecial) {
-       super(idade, nome, aldeia, nivelDificuldade, nomeMissao, statusDaMissao);
+    public Uchiha(Integer idade, String nome, String aldeia, String nivelDificuldade, String nomeMissao, String statusDaMissao, String habilidadeSpecial) {
+        super(idade, nome, aldeia, nivelDificuldade, nomeMissao, statusDaMissao);
         this.habilidadeSpecial = habilidadeSpecial;
     }
 
@@ -16,7 +16,7 @@ public class UchihaChallenge extends NinjaChallenge {
     }
 
     public String HabilidadeEspecial(){
-       return "Habilidade especial: "+ this.habilidadeSpecial;
+        return "Habilidade especial: "+ this.habilidadeSpecial;
     }
     public void mostrarInfosUchiha ( ){
         System.out.println("-------------------------------------");

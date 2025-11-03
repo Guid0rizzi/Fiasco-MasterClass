@@ -1,4 +1,4 @@
-package Intermediate.desafio1;
+package Intermediate.Challenge.ChallengeOne;
 
 import java.util.Scanner;
 
@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         boolean getStartIt = true;
-        NinjaChallenge ninja = null;
+        Ninja ninja = null;
         int MAX_NINJAS = 10;
         String [] ninjas = new String[MAX_NINJAS];
         Integer ninjasCadastrados = 0;
@@ -39,9 +39,9 @@ public class Main {
                     if (serUchiha.equalsIgnoreCase("S")){
                         System.out.println("Habilidade especial");
                         String habilidadeSpecial = sc.next();
-                        ninja = new UchihaChallenge(idade, nome, aldeia, nivelDaMissao, missao, statusDaMissao, habilidadeSpecial );
+                        ninja = new Uchiha(idade, nome, aldeia, nivelDaMissao, missao, statusDaMissao, habilidadeSpecial );
                     }else{
-                        ninja = new NinjaChallenge(idade, nome, aldeia, nivelDaMissao, missao, statusDaMissao);
+                        ninja = new Ninja(idade, nome, aldeia, nivelDaMissao, missao, statusDaMissao);
                     }
                     if (ninjasCadastrados < MAX_NINJAS){
                         ninjas[ninjasCadastrados] = nome;
@@ -51,14 +51,14 @@ public class Main {
                     System.out.println("-------------------------------------");
                     break;
                 case 2:
-                    if (ninja instanceof UchihaChallenge){
-                        ((UchihaChallenge)ninja).mostrarInfosUchiha();
+                    if (ninja instanceof Uchiha){
+                        ((Uchiha)ninja).mostrarInfosUchiha();
                         System.out.println("Deseja alterar a habilidade Especial do seu Uchiha?");
                         String escolha = sc.next();
                         if (escolha.equalsIgnoreCase("S")){
                             System.out.println("Qual sera a nova habilidade especial?");
                             String habilidadeEspecial = sc.next();
-                            ((UchihaChallenge)ninja).setHabilidadeSpecial(habilidadeEspecial);
+                            ((Uchiha)ninja).setHabilidadeSpecial(habilidadeEspecial);
                             System.out.println("Ninja atualizado! To certo ");
                             System.out.println("-------------------------------------");
                         }
